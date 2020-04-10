@@ -42,8 +42,10 @@ object demoKTPAC {
     
     var remain = delta;
     while(sysContainer.size()>1){
-      val numOfComGroups = sysContainer.size()/nSysInGroup + 1;
-      
+      var numOfComGroups = sysContainer.size()/nSysInGroup + 1;
+      if(sysContainer.size()*1.0/nSysInGroup==sysContainer.size()/nSysInGroup){
+        numOfComGroups = numOfComGroups-1;
+      }
       surIDs.addAll(sysContainer.keySet());
       
       for(i<- 0 to numOfComGroups-1){
